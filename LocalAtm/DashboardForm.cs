@@ -29,7 +29,7 @@ namespace LocalAtm
 
         private void btnWidthdraw_Click(object sender, EventArgs e)
         {
-            new WidthdrawForm().ShowDialog();
+            new WidthdrawForm(atmService).ShowDialog();
         }
 
         private void btnViewTransactions_Click(object sender, EventArgs e)

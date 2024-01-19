@@ -15,7 +15,7 @@ namespace LocalAtm.Lib.Services
 
         public int GetCurrentBalance()
         {
-            return currentAccount?.Balance ?? 0;    
+            return currentAccount?.Balance ?? 0;
         }
 
         public async Task LoadAccountsAsync(string path)
@@ -32,10 +32,37 @@ namespace LocalAtm.Lib.Services
                 new JsonSerializerOptions(JsonSerializerDefaults.Web)) ?? [];
         }
 
+        public async Task WriteAccountsAsync(string path)
+        {
+            await File.WriteAllTextAsync(path, JsonSerializer.Serialize(accounts));
+        }
+
         public bool Login(string cardNumber, int pin)
         {
             currentAccount = accounts.SingleOrDefault(a => a.CardNumber == cardNumber && a.Pin == pin);
             return currentAccount != null;
+        }
+
+        public bool Widthdraw(int amount)
+        {
+            if (currentAccount is null)
+            {
+                throw new Exception("No current account found");
+            }
+
+            if (currentAccount.Balance < amount)
+            {
+                return false;
+            }
+
+            currentAccount.Balance -= amount;
+            currentAccount.Transactions.Add(new AccountTransaction
+            {
+                TransactionDate = DateTime.Now,
+                Amount = amount,
+            });
+
+            return true;
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using LocalAtm.Lib.Services;
+﻿using LocalAtm.Lib;
+using LocalAtm.Lib.Services;
 
 namespace LocalAtm
 {
@@ -41,7 +42,7 @@ namespace LocalAtm
 
         private async void LoginForm_Load(object sender, EventArgs e)
         {
-            await atmService.LoadAccountsAsync("bank.json");
+            await atmService.LoadAccountsAsync(Constants.BANK_PATH);
             btnLogin.Enabled = true;
         }
     }

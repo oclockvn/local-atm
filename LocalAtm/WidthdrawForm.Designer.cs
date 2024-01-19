@@ -28,19 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox1 = new TextBox();
+            txtAmount = new TextBox();
             label1 = new Label();
             label2 = new Label();
             btnAccept = new Button();
             btnCancel = new Button();
             SuspendLayout();
             // 
-            // textBox1
+            // txtAmount
             // 
-            textBox1.Location = new Point(12, 43);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(638, 31);
-            textBox1.TabIndex = 0;
+            txtAmount.Location = new Point(12, 43);
+            txtAmount.Name = "txtAmount";
+            txtAmount.Size = new Size(638, 31);
+            txtAmount.TabIndex = 0;
             // 
             // label1
             // 
@@ -70,6 +70,7 @@
             btnAccept.TabIndex = 3;
             btnAccept.Text = "Accept";
             btnAccept.UseVisualStyleBackColor = true;
+            btnAccept.Click += btnAccept_Click;
             // 
             // btnCancel
             // 
@@ -91,7 +92,7 @@
             Controls.Add(btnAccept);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(textBox1);
+            Controls.Add(txtAmount);
             Name = "WidthdrawForm";
             StartPosition = FormStartPosition.CenterParent;
             Text = "Widthdraw";
@@ -101,7 +102,7 @@
 
         #endregion
 
-        private TextBox textBox1;
+        private TextBox txtAmount;
         private Label label1;
         private Label label2;
         private Button btnAccept;
