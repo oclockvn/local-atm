@@ -72,6 +72,7 @@
             Name = "LoginForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login | ATM version 1.0";
+            Load += LoginForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }

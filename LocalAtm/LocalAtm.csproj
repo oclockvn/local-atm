@@ -18,4 +18,8 @@
     </Content>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\LocalAtm.Lib\LocalAtm.Lib.csproj" />
+  </ItemGroup>
+
 </Project>
