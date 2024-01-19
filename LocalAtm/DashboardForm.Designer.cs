@@ -43,6 +43,7 @@
             btnViewBalance.TabIndex = 0;
             btnViewBalance.Text = "View Balance";
             btnViewBalance.UseVisualStyleBackColor = true;
+            btnViewBalance.Click += btnViewBalance_Click;
             // 
             // btnWidthdraw
             // 
@@ -53,6 +54,7 @@
             btnWidthdraw.TabIndex = 1;
             btnWidthdraw.Text = "Widthdraw";
             btnWidthdraw.UseVisualStyleBackColor = true;
+            btnWidthdraw.Click += btnWidthdraw_Click;
             // 
             // btnViewTransactions
             // 
@@ -63,6 +65,7 @@
             btnViewTransactions.TabIndex = 2;
             btnViewTransactions.Text = "View Last Transactions";
             btnViewTransactions.UseVisualStyleBackColor = true;
+            btnViewTransactions.Click += btnViewTransactions_Click;
             // 
             // lblUsername
             // 

@@ -16,5 +16,20 @@ namespace LocalAtm
         {
             InitializeComponent();
         }
+
+        private void btnViewBalance_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show($"Your balance is: 5000USD", "Balance", MessageBoxButtons.OK);
+        }
+
+        private void btnWidthdraw_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnViewTransactions_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
