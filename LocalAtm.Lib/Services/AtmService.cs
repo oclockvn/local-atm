@@ -1,10 +1,5 @@
 ﻿using LocalAtm.Lib.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Text.Json;
-using System.Threading.Tasks;
 
 namespace LocalAtm.Lib.Services
 {
@@ -12,6 +7,16 @@ namespace LocalAtm.Lib.Services
     {
         private List<Account> accounts = [];
         private Account? currentAccount = null;
+
+        public string GetCurrentAccountName()
+        {
+            return currentAccount?.FullName ?? "";
+        }
+
+        public int GetCurrentBalance()
+        {
+            return currentAccount?.Balance ?? 0;    
+        }
 
         public async Task LoadAccountsAsync(string path)
         {

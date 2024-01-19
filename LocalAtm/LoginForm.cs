@@ -36,7 +36,7 @@ namespace LocalAtm
             }
 
             Hide();
-            new DashboardForm().ShowDialog();
+            new DashboardForm(atmService).ShowDialog();
         }
 
         private async void LoginForm_Load(object sender, EventArgs e)

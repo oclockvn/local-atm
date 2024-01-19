@@ -32,6 +32,7 @@
             btnWidthdraw = new Button();
             btnViewTransactions = new Button();
             lblUsername = new Label();
+            btnDeposit = new Button();
             SuspendLayout();
             // 
             // btnViewBalance
@@ -48,7 +49,7 @@
             // btnWidthdraw
             // 
             btnWidthdraw.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            btnWidthdraw.Location = new Point(21, 208);
+            btnWidthdraw.Location = new Point(21, 248);
             btnWidthdraw.Name = "btnWidthdraw";
             btnWidthdraw.Size = new Size(448, 34);
             btnWidthdraw.TabIndex = 1;
@@ -59,7 +60,7 @@
             // btnViewTransactions
             // 
             btnViewTransactions.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            btnViewTransactions.Location = new Point(21, 260);
+            btnViewTransactions.Location = new Point(21, 294);
             btnViewTransactions.Name = "btnViewTransactions";
             btnViewTransactions.Size = new Size(448, 34);
             btnViewTransactions.TabIndex = 2;
@@ -76,17 +77,30 @@
             lblUsername.TabIndex = 3;
             lblUsername.Text = "Hi,";
             // 
+            // btnDeposit
+            // 
+            btnDeposit.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            btnDeposit.Location = new Point(21, 202);
+            btnDeposit.Name = "btnDeposit";
+            btnDeposit.Size = new Size(448, 34);
+            btnDeposit.TabIndex = 4;
+            btnDeposit.Text = "Deposit";
+            btnDeposit.UseVisualStyleBackColor = true;
+            // 
             // DashboardForm
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(481, 450);
+            Controls.Add(btnDeposit);
             Controls.Add(lblUsername);
             Controls.Add(btnViewTransactions);
             Controls.Add(btnWidthdraw);
             Controls.Add(btnViewBalance);
             Name = "DashboardForm";
+            StartPosition = FormStartPosition.CenterParent;
             Text = "Dashboard | ATM version 1.0";
+            Load += DashboardForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -97,5 +111,6 @@
         private Button btnWidthdraw;
         private Button btnViewTransactions;
         private Label lblUsername;
+        private Button btnDeposit;
     }
 }
