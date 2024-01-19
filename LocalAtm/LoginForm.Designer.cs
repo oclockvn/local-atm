@@ -59,6 +59,7 @@
             btnLogin.TabIndex = 2;
             btnLogin.Text = "LOGIN";
             btnLogin.UseVisualStyleBackColor = true;
+            btnLogin.Click += btnLogin_Click;
             // 
             // LoginForm
             // 
@@ -70,7 +71,7 @@
             Controls.Add(txtCardNumber);
             Name = "LoginForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Login";
+            Text = "Login | ATM version 1.0";
             ResumeLayout(false);
             PerformLayout();
         }
